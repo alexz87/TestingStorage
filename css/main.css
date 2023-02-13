@@ -1,0 +1,211 @@
+@import url('fonts.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --index: calc(1vw + 1vh);
+}
+html, body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fixel';
+    background-color: #ccc;
+}
+img {width: 100%}
+.container {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    box-shadow: 0 7px 12px 3px #333;
+    background-color: #fcfcfc;
+}
+#logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+}
+.rounded {border-radius: 8px}
+.space-y-3 > :not(:first-child) {margin-top: 12px}
+.space-x-1 > :not(:first-child) {margin-left: 4px}
+.space-x-2 > :not(:first-child) {margin-left: 8px}
+.graph-block {
+    width: calc(100% - 40px);
+    height: calc(80% - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+.name-box {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.graph-block__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.name {
+    width: 50%;
+    text-align: center;
+}
+.after {
+    font-size: 10px;
+    white-space: nowrap;
+}
+.after > :first-child {margin-right: 4px}
+.checked:checked {
+    accent-color: #333;
+}
+.checked {
+    width: 8px;
+}
+.icon {
+    padding: 2px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+.graph-box {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.graph {
+    width: 70%;
+    height: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.gb {
+    height: 100%;
+    background: #999;
+}
+.slider-block {
+    width: calc(100% - 40px);
+    height: calc(20% - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.slider-block__box {
+    width: 100%;
+    min-height: 40px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 5px;
+    background: #333;
+    outline: none;
+}
+.t {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 25px;
+    background: #333;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 25px;
+    background: #333;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .container {flex-direction: column}
+    .space-y-5 > :not(:first-child) {margin-top: 20px}
+    .slider-block {
+        height: 30%;
+        flex-direction: column;
+    }
+    .slider {width: 90%}
+    .t {width: 90%}
+    .graph-block {flex-direction: column}
+    .name-box {
+        width: 100%;
+        height: 30%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .after > :first-child {margin: 0}
+    .graph-block__box {
+        height: 100%;
+        flex-direction: column-reverse;
+        justify-content: end;
+    }
+    .name {
+        width: 100%;
+        height: 15%;
+        margin-top: 10px;
+    }
+    .graph-box {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+    }
+    .graph {
+        width: 70%;
+        height: 100%;
+        flex-direction: column-reverse;
+        justify-content: end;
+    }
+    .gb {
+        width: 50%;
+        background: #333;
+    }
+    .price {
+        max-width: 10%;
+        transform: rotate(-90deg);
+    }
+}
+.ua {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 7px #333;
+}
+.f-ua {color: #0080ff}
+.t-ua {
+    transform: translateY(-2px);
+    color: #ffd700;
+}
+.s-ua {color: #ffff00}

@@ -1,0 +1,27 @@
+/* 
+
+    --- FONT FIXEL 2022 ---
+
+*/
+
+/* Webfont: MacPawFixelText-Regular */@font-face {
+    font-family: 'Fixel';
+    src: url('../fonts/MacPawFixelText-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/MacPawFixelText-Regular.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+/* 
+
+    --- FONT RUTENIA 2008 ---
+
+*/
+/* Webfont: Rutenia2008VasylChebanyk-Regular */@font-face {
+    font-family: 'Rutenia';
+    src: url('../fonts/Rutenia2008VasylChebanyk.woff2') format('woff2');
+             font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}

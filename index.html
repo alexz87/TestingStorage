@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="author" content="Oleksandr Zadorozhnii">
+    <meta name="company" content="AlexProger">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/favico.ico">
+    <script src="https://kit.fontawesome.com/efdec6ffc9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container rounded">
+        <a href="https://alexproger.com" id="logo">by @alexproger.com</a>
+        <div class="graph-block">
+
+            <!-- GRAPH -->
+            <div class="graph-box">
+                <div class="graph space-x-2">
+                    <span id="ba-gb" class="gb"></span>
+                    <span id="ba-res" class="price">$0</span>
+                </div>
+                <div class="graph space-x-2">
+                    <span id="bu-gb" class="gb"></span>
+                    <span id="bu-res" class="price">$0</span>
+                </div>
+                <div class="graph space-x-2">
+                    <span id="sc-gb" class="gb"></span>
+                    <span id="sc-res" class="price">$0</span>
+                </div>
+                <div class="graph space-x-2">
+                    <span id="vu-gb" class="gb"></span>
+                    <span id="vu-res" class="price">$0</span>
+                </div>
+            </div>
+
+            <!-- NAMES -->
+            <div class="name-box">
+
+                <!-- backblaze -->
+                <div class="graph-block__box">
+                    <div class="name">backblaze</div>
+                    <div class="icon"><img src="img/backblaze.com.webp" class=""></div>
+                </div>
+
+                <!-- bunny -->
+                <div class="graph-block__box">
+                    <div class="name bunny">
+                        <div>bunny</div>
+                        <div class="after">
+                            <span>
+                                <input type="radio" id="bunny-hdd" onchange="getBu('#bunny-hdd')" name="bunny" value="0.01" class="checked" checked>
+                                <span class="">hdd</span>
+                            </span> 
+                            <span>
+                                <input type="radio" id="bunny-ssd" onchange="getBu('#bunny-ssd')" name="bunny" value="0.02" class="checked">
+                                <span class="">ssd</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="icon"><img src="img/bunny.net.jpeg" class=""></div>
+                </div>
+
+                <!-- scaleway -->
+                <div class="graph-block__box">
+                    <div class="name scaleway">
+                        <div>scaleway</div>
+                        <div class="after">
+                            <span>
+                                <input type="radio" id="scaleway-multi" onchange="getSc('#scaleway-multi')" name="scaleway" value="0.06" class="checked">
+                                <span class="">Multi</span>
+                            </span>
+                            <span>
+                                <input type="radio" id="scaleway-single" onchange="getSc('#scaleway-single')" name="scaleway" value="0.03" class="checked" checked>
+                                <span class="">Single</span>
+                            </span>
+                        </div>                
+                    </div>
+                    <div class="icon"><img src="img/scaleway.com.png" class=""></div>
+                </div>
+
+                <!-- vultr -->
+                <div class="graph-block__box">
+                    <div class="name">vultr</div>
+                    <div class="icon"><img src="img/vultr.com.png" class=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-block space-y-5">
+            <div class="slider-block__box space-y-3">
+                <div class="t">
+                    <span >1</span>
+                    <span >Storage: <span id="storage-slider">1</span> Gb</span>
+                    <span >1000</span>
+                </div>
+                <input id="storage-input" type="range" min="1" max="1000" value="1" class="slider">
+            </div>
+            <div class="slider-block__box space-y-3">
+                <div class="t">
+                    <span >1</span>
+                    <span >Transfer: <span id="transfer-slider">1</span> Gb</span>
+                    <span >1000</span>
+                </div>
+                <input id="transfer-input" type="range" min="1" max="1000" value="1" class="slider">
+            </div>
+        </div>
+    </div>
+    <div class="ua space-x-2">
+        <span class="f-ua">Слава Україні</span>
+        <span class="t-ua">tryzub</span>
+        <span class="s-ua">Героям Слава</span>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
